@@ -1,3 +1,4 @@
+import modal from '../support/pages/components/modal';
 import createPage from '../support/pages/create';
 
 const data = require('../fixtures/orphanages.json');
@@ -14,12 +15,7 @@ describe('Cadastro de orfanatos', () => {
     cy.setMapCoordinates(orphanage.latitude, orphanage.longitude);
     createPage.form(orphanage);
     createPage.submit();
-
-    cy.get('.swal2-title').should('be.visible').should('have.text', 'Uhull!');
-
-    cy.get('.swal2-html-container')
-      .should('be.visible')
-      .should('have.text', 'Orfanato cadastrado com sucesso.');
+    modal.haveText('Orfanato cadastrado com sucesso.');
   });
 
   it('não deve cadastrar orfanato com o nome duplicado', () => {
@@ -32,21 +28,10 @@ describe('Cadastro de orfanatos', () => {
     cy.postOrphanage(orphanage);
 
     createPage.go();
-
     cy.setMapCoordinates(orphanage.latitude, orphanage.longitude);
-
     createPage.form(orphanage);
-
     createPage.submit();
-
-    cy.get('.swal2-title').should('be.visible').should('have.text', 'Oops!');
-
-    cy.get('.swal2-html-container')
-      .should('be.visible')
-      .should(
-        'have.text',
-        `Já existe um cadastro com o nome: ${orphanage.name}`,
-      );
+    modal.haveText(`Já existe um cadastro com o nome: ${orphanage.name}`);
   });
 });
 
