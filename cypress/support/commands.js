@@ -23,3 +23,63 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('goTo', (url, latitude, longitude) => {
+  cy.visit(url, {
+    onBeforeLoad(win) {
+      // Simula as coordenadas de um local específico
+      cy.stub(win.navigator.geolocation, 'getCurrentPosition').callsArgWith(0, {
+        coords: {
+          latitude,
+          longitude,
+          accuracy: 10,
+        },
+      });
+    },
+  });
+});
+
+Cypress.Commands.add('setMapCoordinates', (latitude, longitude) => {
+  window.localStorage.setItem('hope-qa:latitude', latitude);
+  window.localStorage.setItem('hope-qa:longitude', longitude);
+});
+
+Cypress.Commands.add('deleteOrphanage', (orphanage) => {
+  cy.findOneAndDelete(
+    { name: orphanage.name },
+    { collection: 'orphanages' },
+  ).then((result) => {
+    if (result == null) {
+      cy.log('Nenhum documento conflitante');
+    } else {
+      cy.log('Documento deletado:', JSON.stringify(result)); // Loga o documento deletado
+    }
+  });
+});
+
+Cypress.Commands.add('postOrphanage', (orphanage) => {
+  cy.fixture(orphanage.images[0])
+    .then((image) => Cypress.Blob.binaryStringToBlob(image, 'image/png'))
+    .then((blob) => {
+      const data = new FormData();
+
+      data.append('name', orphanage.name);
+      data.append('description', orphanage.description);
+      data.append('latitude', orphanage.latitude);
+      data.append('longitude', orphanage.longitude);
+      data.append('opening_hours', orphanage.opening_hours);
+      data.append('open_on_weekends', orphanage.open_on_weekends);
+      data.append('images', blob, orphanage.images[0]);
+
+      cy.request({
+        url: 'http://localhost:3333/orphanages',
+        method: 'POST',
+        headers: {
+          'content-type': 'multipart/form-data',
+        },
+        body: data,
+      }).then((response) => {
+        expect(response.status).to.eq(201);
+      });
+    });
+});
