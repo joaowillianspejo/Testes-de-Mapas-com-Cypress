@@ -1,4 +1,3 @@
-import modal from '../support/pages/components/modal';
 import createPage from '../support/pages/create';
 
 const data = require('../fixtures/orphanages.json');
@@ -15,7 +14,7 @@ describe('Cadastro de orfanatos', () => {
     cy.setMapCoordinates(orphanage.latitude, orphanage.longitude);
     createPage.form(orphanage);
     createPage.submit();
-    modal.haveText('Orfanato cadastrado com sucesso.');
+    createPage.modal.haveText('Orfanato cadastrado com sucesso.');
   });
 
   it('não deve cadastrar orfanato com o nome duplicado', () => {
@@ -31,7 +30,9 @@ describe('Cadastro de orfanatos', () => {
     cy.setMapCoordinates(orphanage.latitude, orphanage.longitude);
     createPage.form(orphanage);
     createPage.submit();
-    modal.haveText(`Já existe um cadastro com o nome: ${orphanage.name}`);
+    createPage.modal.haveText(
+      `Já existe um cadastro com o nome: ${orphanage.name}`,
+    );
   });
 });
 

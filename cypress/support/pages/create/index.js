@@ -1,4 +1,10 @@
+import modal from '../components/modal';
+
 class CreatePage {
+  constructor() {
+    this.modal = modal;
+  }
+
   go() {
     cy.goTo('/orphanages/create', -24.0191918, -46.4296952);
 
