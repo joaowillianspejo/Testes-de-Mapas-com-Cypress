@@ -30,4 +30,30 @@ describe('Cadastro de orfanatos', () => {
 
     cy.modalHaveText(`Já existe um cadastro com o nome: ${orphanage.name}`);
   });
+
+  it('não deve cadastrar um orfanato sem preencher os campos obrigatórios', () => {
+    const randomOrphanage = Math.floor(Math.random() * data.orphanages.length);
+
+    let orphanage = data.orphanages[randomOrphanage];
+
+    delete orphanage.latitude;
+    delete orphanage.longitude;
+    delete orphanage.name;
+    delete orphanage.description;
+    delete orphanage.images;
+    delete orphanage.opening_hours;
+
+    cy.goToCreate();
+
+    cy.createOrphanage(orphanage);
+
+    cy.alertHaveText(
+      '.map .leaflet-container',
+      'Informe a localizaçao no mapa',
+    );
+    cy.alertHaveText('#name', 'Campo obrigatório');
+    cy.alertHaveText('#description', 'Campo obrigatório');
+    cy.alertHaveText('input[type="file"]', 'Envie pelo menos uma foto');
+    cy.alertHaveText('#opening_hours', 'Campo obrigatório');
+  });
 });

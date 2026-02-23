@@ -56,7 +56,7 @@ Cypress.Commands.add('deleteOrphanage', (orphanage) => {
     if (result == null) {
       cy.log('Nenhum documento conflitante');
     } else {
-      cy.log('Documento deletado:', JSON.stringify(result)); // Loga o documento deletado
+      cy.log('Documento deletado: ', JSON.stringify(result)); // Loga o documento deletado
     }
   });
 });
