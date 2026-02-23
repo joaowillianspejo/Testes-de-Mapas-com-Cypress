@@ -7,6 +7,8 @@ Cypress.Commands.add('goToCreate', () => {
 });
 
 Cypress.Commands.add('createOrphanage', (orphanage) => {
+  cy.setMapCoordinates(orphanage.latitude, orphanage.longitude);
+
   cy.get('#name').type(orphanage.name);
   cy.get('#description').type(orphanage.description);
   cy.get('#opening_hours').type(orphanage.opening_hours);

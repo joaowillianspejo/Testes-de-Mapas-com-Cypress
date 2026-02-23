@@ -10,8 +10,6 @@ describe('Cadastro de orfanatos', () => {
 
     cy.goToCreate();
 
-    cy.setMapCoordinates(orphanage.latitude, orphanage.longitude);
-
     cy.createOrphanage(orphanage);
 
     cy.modalHaveText('Orfanato cadastrado com sucesso.');
@@ -27,8 +25,6 @@ describe('Cadastro de orfanatos', () => {
     cy.postOrphanage(orphanage);
 
     cy.goToCreate();
-
-    cy.setMapCoordinates(orphanage.latitude, orphanage.longitude);
 
     cy.createOrphanage(orphanage);
 
