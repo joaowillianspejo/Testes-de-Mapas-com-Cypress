@@ -3,3 +3,11 @@ Cypress.Commands.add('modalHaveText', (message) => {
     .should('be.visible')
     .should('have.text', message);
 });
+
+Cypress.Commands.add('alertHaveText', (inputLocator, message) => {
+  cy.get(inputLocator)
+    .parent()
+    .find('small')
+    .should('be.visible')
+    .should('have.text', message);
+});

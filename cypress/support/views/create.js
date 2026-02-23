@@ -45,11 +45,3 @@ Cypress.Commands.add('createOrphanage', (orphanage) => {
 
   cy.get('.create-orphanage-form .save-button').click();
 });
-
-Cypress.Commands.add('alertHaveText', (inputLocator, message) => {
-  cy.get(inputLocator)
-    .parent()
-    .find('small')
-    .should('be.visible')
-    .should('have.text', message);
-});
