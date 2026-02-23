@@ -58,7 +58,7 @@ Cypress.Commands.add('deleteOrphanage', (orphanage) => {
 });
 
 Cypress.Commands.add('postOrphanage', (orphanage) => {
-  cy.fixture(orphanage.images[0])
+  cy.fixture(orphanage.images[0], 'binary')
     .then((image) => Cypress.Blob.binaryStringToBlob(image, 'image/png'))
     .then((blob) => {
       const data = new FormData();
