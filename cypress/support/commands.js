@@ -24,6 +24,10 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import './views/components';
+import './views/create';
+import './views/map';
+
 Cypress.Commands.add('goTo', (url, latitude, longitude) => {
   cy.visit(url, {
     onBeforeLoad(win) {

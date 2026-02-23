@@ -1,5 +1,3 @@
-import createPage from '../support/pages/create';
-
 const data = require('../fixtures/orphanages.json');
 
 describe('Cadastro de orfanatos', () => {
@@ -10,11 +8,13 @@ describe('Cadastro de orfanatos', () => {
 
     cy.deleteOrphanage(orphanage);
 
-    createPage.go();
+    cy.goToCreate();
+
     cy.setMapCoordinates(orphanage.latitude, orphanage.longitude);
-    createPage.form(orphanage);
-    createPage.submit();
-    createPage.modal.haveText('Orfanato cadastrado com sucesso.');
+
+    cy.createOrphanage(orphanage);
+
+    cy.modalHaveText('Orfanato cadastrado com sucesso.');
   });
 
   it('não deve cadastrar orfanato com o nome duplicado', () => {
@@ -26,12 +26,12 @@ describe('Cadastro de orfanatos', () => {
 
     cy.postOrphanage(orphanage);
 
-    createPage.go();
+    cy.goToCreate();
+
     cy.setMapCoordinates(orphanage.latitude, orphanage.longitude);
-    createPage.form(orphanage);
-    createPage.submit();
-    createPage.modal.haveText(
-      `Já existe um cadastro com o nome: ${orphanage.name}`,
-    );
+
+    cy.createOrphanage(orphanage);
+
+    cy.modalHaveText(`Já existe um cadastro com o nome: ${orphanage.name}`);
   });
 });
