@@ -87,8 +87,7 @@ describe('Cadastro de orfanatos', () => {
 
       let orphanage = data.orphanages[randomOrphanage];
 
-      delete orphanage.latitude;
-      delete orphanage.longitude;
+      delete orphanage.location;
       delete orphanage.name;
       delete orphanage.description;
       delete orphanage.images;

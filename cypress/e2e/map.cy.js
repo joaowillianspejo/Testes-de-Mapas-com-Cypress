@@ -17,6 +17,6 @@ describe('Mapa', () => {
       .should('be.visible')
       .should('have.text', orphanage.name);
 
-    cy.googleMapsLink(orphanage);
+    cy.googleMapsLink(orphanage.location);
   });
 });

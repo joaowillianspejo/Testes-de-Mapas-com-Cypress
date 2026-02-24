@@ -5,8 +5,10 @@
       "description": "Acolhemos crianças de 0 a 12 anos em situação de vulnerabilidade, oferecendo educação, alimentação e muito amor.",
       "opening_hours": "08:00 às 18:00",
       "open_on_weekends": true,
-      "latitude": -23.967721,
-      "longitude": -46.327845,
+      "location": {
+        "latitude": -23.967721,
+        "longitude": -46.327845
+      },
       "images": [
         "images/orphanages/lar_das_criancas_felizes_1.png",
         "images/orphanages/lar_das_criancas_felizes_2.png"
@@ -17,8 +19,10 @@
       "description": "Focado no desenvolvimento de crianças e adolescentes, com oficinas profissionalizantes e preparação para o futuro.",
       "opening_hours": "09:00 às 17:00",
       "open_on_weekends": false,
-      "latitude": -23.963412,
-      "longitude": -46.391288,
+      "location": {
+        "latitude": -23.963412,
+        "longitude": -46.391288
+      },
       "images": [
         "images/orphanages/abrigo_esperanca_1.png",
         "images/orphanages/abrigo_esperanca_2.png"
@@ -29,8 +33,10 @@
       "description": "Proporcionamos um ambiente familiar e seguro para jovens, com acompanhamento psicológico e pedagógico contínuo.",
       "opening_hours": "07:00 às 19:00",
       "open_on_weekends": true,
-      "latitude": -24.005834,
-      "longitude": -46.413756,
+      "location": {
+        "latitude": -24.005834,
+        "longitude": -46.413756
+      },
       "images": [
         "images/orphanages/casa_de_acolhimento_sol_nascente_1.png",
         "images/orphanages/casa_de_acolhimento_sol_nascente_2.png"
@@ -41,8 +47,10 @@
       "description": "Berçário e orfanato especializado no cuidado integral de bebês e crianças de até 5 anos.",
       "opening_hours": "08:00 às 16:00",
       "open_on_weekends": false,
-      "latitude": -23.987015,
-      "longitude": -46.301533,
+      "location": {
+        "latitude": -23.987015,
+        "longitude": -46.301533
+      },
       "images": [
         "images/orphanages/cantinho_do_amor_1.png",
         "images/orphanages/cantinho_do_amor_2.png"
@@ -53,8 +61,10 @@
       "description": "Organização dedicada a cuidar de crianças em risco social, promovendo atividades esportivas e culturais.",
       "opening_hours": "08:00 às 20:00",
       "open_on_weekends": true,
-      "latitude": -24.020387,
-      "longitude": -46.456891,
+      "location": {
+        "latitude": -24.020387,
+        "longitude": -46.456891
+      },
       "images": [
         "images/orphanages/instituto_estrela_guia_1.png",
         "images/orphanages/instituto_estrela_guia_2.png"

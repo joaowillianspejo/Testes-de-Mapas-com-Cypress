@@ -69,8 +69,8 @@ Cypress.Commands.add('postOrphanage', (orphanage) => {
 
       data.append('name', orphanage.name);
       data.append('description', orphanage.description);
-      data.append('latitude', orphanage.latitude);
-      data.append('longitude', orphanage.longitude);
+      data.append('latitude', orphanage.location.latitude);
+      data.append('longitude', orphanage.location.longitude);
       data.append('opening_hours', orphanage.opening_hours);
       data.append('open_on_weekends', orphanage.open_on_weekends);
       data.append('images', blob, orphanage.images[0]);

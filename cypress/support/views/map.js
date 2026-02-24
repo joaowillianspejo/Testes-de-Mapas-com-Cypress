@@ -27,8 +27,8 @@ Cypress.Commands.add('findOrphanage', (orphanage) => {
   cy.contains(popupLocator, orphanage.name).find('a').click({ force: true });
 });
 
-Cypress.Commands.add('googleMapsLink', (orphanage) => {
-  const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${orphanage.latitude},${orphanage.longitude}`;
+Cypress.Commands.add('googleMapsLink', (location) => {
+  const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${location.latitude},${location.longitude}`;
 
   cy.contains('a', 'Ver rotas no Google Maps').should(
     'have.attr',

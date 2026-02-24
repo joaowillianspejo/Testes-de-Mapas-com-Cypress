@@ -12,8 +12,11 @@ Cypress.Commands.add('createOrphanage', (orphanage) => {
   cy.get('#opening_hours').as('fieldOpeningHours');
   cy.get('input[type="file"]').as('fieldImages');
 
-  orphanage.latitude && orphanage.longitude
-    ? cy.setMapCoordinates(orphanage.latitude, orphanage.longitude)
+  orphanage.location
+    ? cy.setMapCoordinates(
+        orphanage.location.latitude,
+        orphanage.location.longitude,
+      )
     : cy.log('Empty map coordinates');
 
   orphanage.name
