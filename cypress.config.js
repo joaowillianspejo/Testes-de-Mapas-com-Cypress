@@ -1,4 +1,5 @@
 const { defineConfig } = require('cypress');
+const { allureCypress } = require('allure-cypress/reporter');
 const { configurePlugin } = require('cypress-mongodb');
 require('dotenv').config();
 
@@ -15,7 +16,12 @@ module.exports = defineConfig({
 
   e2e: {
     setupNodeEvents(on, config) {
+      allureCypress(on, config, {
+        resultsDir: 'cypress/results/allure-results',
+      });
       configurePlugin(on);
+
+      return config;
     },
 
     baseUrl: process.env.BASE_URL,

@@ -13,6 +13,8 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
+import 'allure-cypress';
+
 import { addCommands } from 'cypress-mongodb/dist/index-browser';
 addCommands();
 

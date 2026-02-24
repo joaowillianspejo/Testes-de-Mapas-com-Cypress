@@ -27,7 +27,7 @@ describe('Cadastro de orfanatos', () => {
     cy.modalHaveText(`Já existe um cadastro com o nome: ${orphanage.name}`);
   });
 
-  context('campos obrigatórios', () => {
+  context('Campos obrigatórios', () => {
     it('não deve cadastrar um orfanato sem preencher o campo "Nome"', () => {
       let orphanage = generator();
 
