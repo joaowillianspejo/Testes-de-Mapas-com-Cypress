@@ -1,10 +1,8 @@
-const data = require('../fixtures/orphanages.json');
+import { generator } from '../support/factory';
 
 describe('Cadastro de orfanatos', () => {
   it('deve cadastrar um novo orfanato', () => {
-    const randomOrphanage = Math.floor(Math.random() * data.orphanages.length);
-
-    const orphanage = data.orphanages[randomOrphanage];
+    const orphanage = generator();
 
     cy.deleteOrphanage(orphanage);
 
@@ -16,9 +14,7 @@ describe('Cadastro de orfanatos', () => {
   });
 
   it('não deve cadastrar orfanato com o nome duplicado', () => {
-    const randomOrphanage = Math.floor(Math.random() * data.orphanages.length);
-
-    const orphanage = data.orphanages[randomOrphanage];
+    const orphanage = generator();
 
     cy.deleteOrphanage(orphanage);
 
@@ -33,11 +29,7 @@ describe('Cadastro de orfanatos', () => {
 
   context('campos obrigatórios', () => {
     it('não deve cadastrar um orfanato sem preencher o campo "Nome"', () => {
-      const randomOrphanage = Math.floor(
-        Math.random() * data.orphanages.length,
-      );
-
-      let orphanage = data.orphanages[randomOrphanage];
+      let orphanage = generator();
 
       delete orphanage.name;
 
@@ -49,11 +41,7 @@ describe('Cadastro de orfanatos', () => {
     });
 
     it('não deve cadastrar um orfanato sem preencher o campo "Sobre"', () => {
-      const randomOrphanage = Math.floor(
-        Math.random() * data.orphanages.length,
-      );
-
-      let orphanage = data.orphanages[randomOrphanage];
+      let orphanage = generator();
 
       delete orphanage.description;
 
@@ -65,11 +53,7 @@ describe('Cadastro de orfanatos', () => {
     });
 
     it('não deve cadastrar um orfanato sem enviar ao menos uma foto', () => {
-      const randomOrphanage = Math.floor(
-        Math.random() * data.orphanages.length,
-      );
-
-      let orphanage = data.orphanages[randomOrphanage];
+      let orphanage = generator();
 
       delete orphanage.images;
 
@@ -81,11 +65,7 @@ describe('Cadastro de orfanatos', () => {
     });
 
     it('não deve cadastrar um orfanato sem preencher os campos obrigatórios', () => {
-      const randomOrphanage = Math.floor(
-        Math.random() * data.orphanages.length,
-      );
-
-      let orphanage = data.orphanages[randomOrphanage];
+      let orphanage = generator();
 
       delete orphanage.location;
       delete orphanage.name;

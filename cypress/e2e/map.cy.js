@@ -1,10 +1,8 @@
-const data = require('../fixtures/orphanages.json');
+import { generator } from '../support/factory';
 
 describe('Mapa', () => {
   it('deve poder selecionar um orfanato no mapa', () => {
-    const randomOrphanage = Math.floor(Math.random() * data.orphanages.length);
-
-    const orphanage = data.orphanages[randomOrphanage];
+    const orphanage = generator();
 
     cy.deleteOrphanage(orphanage);
     cy.postOrphanage(orphanage);

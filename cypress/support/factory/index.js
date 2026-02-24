@@ -1,4 +1,4 @@
-const data = require('../fixtures/orphanages.json');
+const data = require('../../fixtures/orphanages.json');
 
 export default {
   generator: function () {
@@ -12,8 +12,8 @@ export default {
       opening_hours: orphanage.opening_hours,
       open_on_weekends: orphanage.open_on_weekends,
       location: {
-        latitude: orphanage.latitude,
-        longitude: orphanage.longitude,
+        latitude: orphanage.location.latitude,
+        longitude: orphanage.location.longitude,
       },
       images: orphanage.images,
     };
