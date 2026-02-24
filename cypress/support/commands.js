@@ -75,15 +75,17 @@ Cypress.Commands.add('postOrphanage', (orphanage) => {
       data.append('open_on_weekends', orphanage.open_on_weekends);
       data.append('images', blob, orphanage.images[0]);
 
-      cy.request({
-        url: 'http://localhost:3333/orphanages',
-        method: 'POST',
-        headers: {
-          'content-type': 'multipart/form-data',
-        },
-        body: data,
-      }).then((response) => {
-        expect(response.status).to.eq(201);
+      cy.env(['baseApi']).then(({ baseApi }) => {
+        cy.request({
+          url: `${baseApi}/orphanages`,
+          method: 'POST',
+          headers: {
+            'content-type': 'multipart/form-data',
+          },
+          body: data,
+        }).then((response) => {
+          expect(response.status).to.eq(201);
+        });
       });
     });
 });

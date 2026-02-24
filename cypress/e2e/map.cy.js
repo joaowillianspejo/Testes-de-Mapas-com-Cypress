@@ -16,5 +16,7 @@ describe('Mapa', () => {
     cy.get('.orphanage-details-content h1')
       .should('be.visible')
       .should('have.text', orphanage.name);
+
+    cy.googleMapsLink(orphanage);
   });
 });
