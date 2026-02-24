@@ -41,3 +41,9 @@ npx cy:open
 ```
 npx test
 ```
+
+#### 📝 Para visualizar o relatório dos testes
+
+```
+npm run allure:open
+```
