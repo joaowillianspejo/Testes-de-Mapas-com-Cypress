@@ -6,12 +6,19 @@
 
 ### Pré-requisito:
 
-- **Node.js**
-  - Você encontra em: https://nodejs.org/pt-br/download
-- **Visual Studio Code** _(ou editor de sua prefrência)_
-  - Você encontra em: https://code.visualstudio.com/download
-- **Git**
-  - Você encontra em: https://git-scm.com/install
+![Node.js](https://img.shields.io/badge/Node.js-v24.14.0-black?logo=node.js&style=flat&logoColor=5FA04E)
+![Cypress](https://img.shields.io/badge/Cypress-v15.10.0-black?logo=cypress&style=flat&logoColor=69D3A7)
+![.ENV](https://img.shields.io/badge/.env-v17.3.1-black?logo=dotenv&style=flat&logoColor=ECD53F)
+![Git](https://img.shields.io/badge/Git-v2.51.0-black?logo=git&style=flat&logoColor=F05032)
+
+> - **Node.js**
+> - Você encontra em: https://nodejs.org/pt-br/download
+
+> - **Visual Studio Code** _(ou editor de sua prefrência)_
+> - Você encontra em: https://code.visualstudio.com/download
+
+> - **Git**
+> - Você encontra em: https://git-scm.com/install
 
 ---
 
