@@ -17,17 +17,17 @@
 
 Via terminal, rode os seguintes comandos:
 
-```
+```Shell
 git clone https://github.com/joaowillianspejo/Testes-de-Mapas-com-Cypress.git
 ```
 
-```
+```Shell
 cd Testes-de-Mapas-com-Cypress
 ```
 
 #### 📦 Para instalar as dependencias:
 
-```
+```Shell
 npm install
 ```
 
@@ -37,18 +37,18 @@ Em um novo terminal, na pasta do projeto, rode os seguintes comandos:
 
 #### 🧪 Para rodar os testes via interface do Cypress
 
-```
+```Shell
 npx cy:open
 ```
 
 #### 🧪 Para rodar todos os testes
 
-```
+```Shell
 npx test
 ```
 
 #### 📝 Para visualizar o relatório dos testes
 
-```
+```Shell
 npm run allure:open
 ```
