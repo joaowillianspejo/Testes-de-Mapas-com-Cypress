@@ -5,9 +5,12 @@
 
 ### Pré-requisito:
 
-- Node.js - Você encontra em: https://nodejs.org/en/
-- Visual Studio Code ( ou editor de sua prefrência) - você encontra em: https://code.visualstudio.com/download
-- Git: você encontra em: https://git-scm.com/downloads
+- **Node.js**
+  - Você encontra em: https://nodejs.org/pt-br
+- **Visual Studio Code** *(ou editor de sua prefrência)*
+  - Você encontra em: https://code.visualstudio.com/download
+- **Git**
+  - Você encontra em: https://git-scm.com/install
 
 ---
 
