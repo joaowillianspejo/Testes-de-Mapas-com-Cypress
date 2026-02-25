@@ -11,14 +11,19 @@
 ![.ENV](https://img.shields.io/badge/.env-v17.3.1-black?logo=dotenv&style=flat&logoColor=ECD53F)
 ![Git](https://img.shields.io/badge/Git-v2.51.0-black?logo=git&style=flat&logoColor=F05032)
 
-> - **Node.js**
-> - Você encontra em: https://nodejs.org/pt-br/download
+---
 
-> - **Visual Studio Code** _(ou editor de sua prefrência)_
-> - Você encontra em: https://code.visualstudio.com/download
+#### **Node.js**
 
-> - **Git**
-> - Você encontra em: https://git-scm.com/install
+Você encontra em: https://nodejs.org/pt-br/download
+
+#### **Visual Studio Code** _(ou editor de sua prefrência)_
+
+Você encontra em: https://code.visualstudio.com/download
+
+#### **Git**
+
+Você encontra em: https://git-scm.com/install
 
 ---
 
