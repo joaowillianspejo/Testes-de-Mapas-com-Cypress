@@ -1,4 +1,5 @@
 # Testes de Mapas e Geolocalização com Cypress
+
 <img width="1080" height="420" alt="Projeto Hope" src="https://github.com/user-attachments/assets/9d641f9e-04ce-4b8e-a7e9-522c91e806b0" />
 
 ## Clonando e executando em sua máquina
@@ -6,8 +7,8 @@
 ### Pré-requisito:
 
 - **Node.js**
-  - Você encontra em: https://nodejs.org/pt-br
-- **Visual Studio Code** *(ou editor de sua prefrência)*
+  - Você encontra em: https://nodejs.org/pt-br/download
+- **Visual Studio Code** _(ou editor de sua prefrência)_
   - Você encontra em: https://code.visualstudio.com/download
 - **Git**
   - Você encontra em: https://git-scm.com/install
