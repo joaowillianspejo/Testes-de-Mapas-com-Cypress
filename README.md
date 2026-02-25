@@ -13,15 +13,15 @@
 
 ---
 
-#### **Node.js**
+#### - **Node.js**
 
 Você encontra em: https://nodejs.org/pt-br/download
 
-#### **Visual Studio Code** _(ou editor de sua prefrência)_
+#### - **Visual Studio Code** _(ou editor de sua prefrência)_
 
 Você encontra em: https://code.visualstudio.com/download
 
-#### **Git**
+#### - **Git**
 
 Você encontra em: https://git-scm.com/install
 
