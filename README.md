@@ -27,6 +27,8 @@ Você encontra em: https://git-scm.com/install
 
 ---
 
+#### ⬇️ Clonando o projeto
+
 Via terminal, rode os seguintes comandos:
 
 ```Shell
@@ -38,6 +40,8 @@ cd Testes-de-Mapas-com-Cypress
 ```
 
 #### 📦 Para instalar as dependencias:
+
+Via terminal, na pasta do projeto, rode os seguinte comando:
 
 ```Shell
 npm install
@@ -64,3 +68,7 @@ npx test
 ```Shell
 npm run allure:open
 ```
+
+---
+
+Made with ❤️ by [João Willian](https://github.com/joaowillianspejo).
