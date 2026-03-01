@@ -54,13 +54,13 @@ Em um novo terminal, na pasta do projeto, rode os seguintes comandos:
 #### 🧪 Para rodar os testes via interface do Cypress
 
 ```Shell
-npx cy:open
+npm run cy:open
 ```
 
 #### 🧪 Para rodar todos os testes
 
 ```Shell
-npx test
+npm run test
 ```
 
 #### 📝 Para visualizar o relatório dos testes
