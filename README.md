@@ -47,6 +47,14 @@ Via terminal, na pasta do projeto, rode os seguinte comando:
 npm install
 ```
 
+#### ⚙️ Configurar variáveis do ambiente:
+
+Antes de rodar os testes, alguma variáveis de ambiente precisam serem configuradas:
+
+Faça uma cópia do [`.env.example`](./.env.example) e renomeie para `.env`, em seguida preenchar as variáveis com os valores apropriados.
+
+> **Nota:** O arquivo `.env` não é versionado no git.
+
 ### Testes:
 
 Em um novo terminal, na pasta do projeto, rode os seguintes comandos:
